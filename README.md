@@ -1,4 +1,4 @@
-# qp
+# null
 [![Go Report Card](https://goreportcard.com/badge/github.com/alexandergrom/null)](https://goreportcard.com/report/github.com/alexandergrom/null) [![GoDoc](https://godoc.org/github.com/alexandergrom/null?status.svg)](https://godoc.org/github.com/alexandergrom/null)
 
 Package null is a simple package for dealing with nullable SQL and JSON values.
