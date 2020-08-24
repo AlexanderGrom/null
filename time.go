@@ -79,3 +79,8 @@ func (e Time) IsZero() bool {
 func (e Time) IsSet() bool {
 	return e.Valid
 }
+
+// IsSetZero returns true if value is set to zero.
+func (e Time) IsSetZero() bool {
+	return e.IsSet() && e.IsZero()
+}

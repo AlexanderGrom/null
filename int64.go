@@ -70,11 +70,16 @@ func (e *Int64) UnmarshalText(text []byte) (err error) {
 }
 
 // IsZero returns true for zero value.
-func (e *Int64) IsZero() bool {
+func (e Int64) IsZero() bool {
 	return e.Int64 == 0
 }
 
 // IsSet returns true for valid value.
-func (e *Int64) IsSet() bool {
+func (e Int64) IsSet() bool {
 	return e.Valid
+}
+
+// IsSetZero returns true if value is set to zero.
+func (e Int64) IsSetZero() bool {
+	return e.IsSet() && e.IsZero()
 }

@@ -81,3 +81,8 @@ func (e String) IsZero() bool {
 func (e String) IsSet() bool {
 	return e.Valid
 }
+
+// IsSetZero returns true if value is set to zero.
+func (e String) IsSetZero() bool {
+	return e.IsSet() && e.IsZero()
+}

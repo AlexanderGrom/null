@@ -81,11 +81,16 @@ func (e *Bool) UnmarshalText(text []byte) error {
 }
 
 // IsZero returns true for zero value.
-func (e *Bool) IsZero() bool {
+func (e Bool) IsZero() bool {
 	return !e.Bool
 }
 
 // IsSet returns true for valid value.
-func (e *Bool) IsSet() bool {
+func (e Bool) IsSet() bool {
 	return e.Valid
+}
+
+// IsSetZero returns true if value is set to zero.
+func (e Bool) IsSetZero() bool {
+	return e.IsSet() && e.IsZero()
 }
